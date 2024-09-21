@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="">
+        <title>About Sriram Selvamani</title>
+        <link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
+        <style>
+            body{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                margin:0px;
+            }
+            #intro{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 10px;
+                padding: 3em 0em 5em;
+                font-weight: bold;
+                /* another design css */
+                /* background-color: orange; */
+            }
+            #name_intro{
+                font-size: 3em;
+            }
+            #name{
+                display:inline-block;
+                /* another design css */
+                /* color:white; */
+                color:tomato;               
+                font-size: 1.5em;
+                margin: 0.2em 0 0.6em;
+                line-height: 0.8em;
+            }
+            #headline{
+                font-size: 1.5em;
+                color:rgb(100, 100, 100);
+                /* another design css */
+                /* color:rgb(50, 50, 50); */
+            }
+            #profile_img{
+                border-radius: 50%;
+                box-shadow: 2px 2px 10px;
+            }
+            section:nth-child(even){
+                background-color: #444;
+                color: white;
+            }
+            section:nth-child(odd){
+                background-color: #eee;
+                color: black;
+            }
+            section:not(:first-child){
+                padding: 2em 1.5em 3em;
+            }
+            #skills ul{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                padding:0px;
+            }
+            #skills ul li{
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                color: black;
+                word-break: break-all;
+                padding: 10px 22px;
+                border-radius: 25px;
+                font-weight: bold;
+            }
+            #skills ul li img{
+                width:3em;
+                height: 3.2em;
+            }
+            #skills h3{
+                font-size: 1.2em;
+                color: #ddd;
+            }
+            #education_timeline{
+                width: 100%;
+                vertical-align: top;
+            }
+            #education_timeline td{
+                border-bottom: 1px solid #444;
+                padding: 20px;
+            }
+            #education_timeline .duration{
+                font-weight: bold;
+            }
+            #education_timeline .course{
+                font-weight: bold;
+                font-size: 1.2em;
+                cursor:default;
+            }
+            #education_timeline .college_mark{
+                height: 0;
+                opacity: 0;
+                transition: all 0.50s ease-out;
+                overflow: hidden;
+            }
+            #education_timeline .course:hover ~ .college_mark{
+                height:auto;
+                opacity: 1;
+            }
+            #education_timeline .college_mark.show{
+                height:auto;
+                opacity: 1;
+            }
+            .project_show{
+                display: flex;
+                gap: 30px;
+                margin: 40px 0px;
+            }
+            .project_show .image_video{
+                flex: 1;
+            }
+            .project_show .project_detail{
+                flex: 1;
+                color: #bbb;
+            }
+            .project_show .project_detail a{
+                color: tomato;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .project_show img{
+                width: 100%;
+            }
+            .project_show .project_title{
+                font-weight: bold;
+                color: white;
+                font-size: 1.5em;
+            }
+            .project_show .project_description{
+                font-style: italic;
+            }
+            #contact .title{
+                font-weight: bold;
+                font-size: 1.1em;
+            }
+            #contact div{
+                margin-bottom: 15px;
+            }
+            #contact .contact_link span{
+                font-weight: bold;
+            }
+            #contact .contact_link a{
+                text-decoration: none;
+                color: tomato;
+            }
+            section h2{
+                font-size: 2em;
+                margin: 0.5em 0em;
+                line-height: 1em;
+                text-align: center;
+                font-style:italic;
+            }
+            @media screen and (max-width:900px){
+                #intro{
+                    flex-direction: column;
+                    text-align: center;
+                }
+                #name_intro{
+                    font-size: 2.7em;
+                }
+                #profile_img{
+                    margin-top: 2em;
+                }
+            }
+            @media screen and (max-width:620px) {
+                #name_intro{
+                    font-size: 2.3em;
+                }
+                #skills ul{
+                    gap: 15px
+                }
+                #skills ul li{
+                    padding: 8px 20px;
+                    border-radius: 20px;
+                }
+                #skills ul li img{
+                    width:2.8em;
+                    height: 3em;
+                }
+            }
+            @media screen and (max-width:490px) {
+                #name_intro{
+                    font-size: 2em;
+                }
+                #name{
+                    font-size: 1.3m;
+                }
+                #headline{
+                    font-size: 1.2em;
+                }
+                #profile_img{
+                    width:200px;
+                }
+                #skills ul li{
+                    padding: 8px 18px;
+                }
+                #skills ul li img{
+                    width:2.4em;
+                    height: 2.6em;
+                }
+            }
+            @media screen and (max-width:400px){
+                #name_intro{
+                    font-size: 1.8em;
+                }
+                #name{
+                    font-size: 1.1em;
+                }
+                #headline{
+                    font-size: 1.1em;
+                }
+                #profile_img{
+                    width:180px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section id="intro">
+            <div>
+                <div id="name_intro">
+                    Hi, I'm <br>
+                    <span id="name">Sriram Selvamani</span>
+                </div>
+                <div id="headline">
+                    Full Stack Developer | Software Developer
+                </div>
+            </div>
+            <img src="./assets/images/sriram_s_profile.jpg" id="profile_img" alt="My Profile Picture" width="230px">
+        </section>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div>
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li><img src="/assets/images/python-logo.png" alt="python-logo">Python</li>
+                    <li><img src="/assets/images/django-logo.png" alt="django-logo">Django Framework</li>
+                    <li><img src="/assets/images/django_rest-logo2.png" alt="django_rest-logo" style="width:120px">Django REST Framework</li>
+                    <li><img src="/assets/images/mysql-logo.png" alt="mysql-logo">MySQL</li>
+                    <li><img src="/assets/images/html-logo.png" alt="html-logo">HTML</li>
+                    <li><img src="/assets/images/css-logo.png" alt="css-logo">CSS</li>
+                    <li><img src="/assets/images/javascript-logo.png" alt="javascript-logo">JavaScript</li>
+                    <li><img src="/assets/images/git-logo.png" alt="git-logo">Git</li>
+                    <li><img src="/assets/images/github-logo.png" alt="github-logo">Git</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Self Learning</li>
+                </ul>
+            </div>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <table id="education_timeline">
+                <tr>
+                    <td class="duration">2022 - 2024</td>
+                    <td>
+                        <span class="course">Master of Computer Applications (MCA)</span><br>
+                        <div class="college_mark">
+                            <span><em>A.V.C. College of Engineering, Mannampandal</em></span><br>
+                            <span>Mark Percentage: <span>75%</span></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="duration">2019 - 2022</td>
+                    <td>
+                        <span class="course">Bachelor of Computer Applications (BCA)</span><br>
+                        <div class="college_mark">
+                            <span><em>A.V.C. College (Autonomous), Mannampandal</em></span><br>
+                            <span>Mark Percentage: <span>70%</span></span>
+                        </div>
+                    </td>
+                </tr> 
+            </table>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project_show">
+                <div class="image_video">
+                    <img src="assets/images/project1_homepage.PNG" alt="project1_homepage" >
+                </div>
+                <div class="project_detail">
+                    <span class="project_title">Web-Based Hardware Shop Management System</span><br>
+                    <p class="project_description">
+                        It is my PG project. It is a web-based inventory and point-of-sale system with sales reporting 
+                        features, designed for hardware shops but adaptable for any store, allowing users to manage products, 
+                        variants, suppliers, customers, and transactions, while providing monthly profit, product-based, 
+                        and customer-based reports.
+                    </p>
+                    <span style="font-weight: bold;">Used Skills: </span><span>Django framework, MySQL, HTML, CSS, JavaScript</span>
+                    <p>See GitHub Source: <a href="https://github.com/sriram-s17/mca-project">sriram-s17/mca-project</a></p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div>
+                <span class="title">Permanent Address</span>
+                <address>Door No. 2/85, Sivan Koil Street, Sembanarkoil, Mayiladuthurai Dt, Tamilnadu, India, 609309.</address>
+            </div>
+            <div>
+                <span class="title">Current Address</span>
+                <address>Vijinapura, Bengaluru, Karnataka, 560016.</address>
+            </div>
+            <div>
+                <span class="contact_link"><span><i class="fa-solid fa-phone"></i> Phone No: </span> <a href="tel:+919943686989">(+91) 9943686989</a></span>
+            </div>
+            <div>
+                <span class="contact_link"><span><i class="fa-solid fa-envelope"></i> Email ID: </span><a href="mailto:sriramselvamani01@gmail.com">sriramselvamani01@gmail.com</a></span>
+            </div>
+            <div>
+                <span class="social_link contact_link"><span><i class="fa-brands fa-linkedin"></i> LinkedIn: </span><a href="https://www.linkedin.com/in/sriram-selvamani/">sriram-selvamani</a></span>
+            </div>
+            <div>
+                <span class="social_link contact_link"><span><i class="fa-brands fa-github"></i> GitHub: </span><a href="https://github.com/sriram-s17">sriram-s17</a></span>
+            </div>
+        </section>
+        <script>
+            courses = document.querySelectorAll('.course')
+            courses.forEach(course => {
+                course.addEventListener('click', ()=>{
+                    course.parentNode.querySelector('.college_mark').classList.toggle('show')
+                })
+            });
+        </script>
+    </body>
+</html>
