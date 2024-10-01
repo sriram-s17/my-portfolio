@@ -10,15 +10,28 @@
             body{
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 margin:0px;
+                background-color: #f9f9f9;
+                color: #444;
             }
             #intro{
                 display:flex;
-                justify-content: space-around;
+                justify-content: center;
                 align-items: center;
-                gap: 10px;
-                padding: 3em 0em 5em;
+                gap: 40px;
+                padding: 3em 0em 3.5em;
                 font-weight: bold;
-                /* another design css */
+                background-color: orange;
+                z-index: 2;
+            }
+            #circle::after{
+                content: "";
+                display: block;
+                position: relative;
+                border-radius: 0 0 50% 50%;
+                width: 100%;
+                height: 100px;
+                top: -50px;
+                z-index: -1;
                 background-color: orange;
             }
             #name_intro{
@@ -43,16 +56,15 @@
                 border-radius: 50%;
                 box-shadow: 2px 2px 10px;
             }
-            section:nth-child(even){
-                background-color: #444;
-                color: white;
-            }
-            section:nth-child(odd){
-                background-color: #eee;
-                color: black;
-            }
             section:not(:first-child){
-                padding: 2em 1.5em 3em;
+                padding: 1em 1.5em 3em;
+            }
+            section h2{
+                font-size: 2em;
+                margin: 0.5em 0em;
+                line-height: 1em;
+                text-align: center;
+                font-style:italic;
             }
             #skills ul{
                 display: flex;
@@ -72,6 +84,8 @@
                 padding: 10px 22px;
                 border-radius: 25px;
                 font-weight: bold;
+                border:1.5px solid #aaa;
+                box-shadow: 2px 1px 1px;
             }
             #skills ul li img{
                 width:3em;
@@ -79,23 +93,26 @@
             }
             #skills h3{
                 font-size: 1.2em;
-                color: #ddd;
+                color: orangered;
+            }
+            #education{
+                background-color: #444;
+                color: white;
             }
             #education_timeline{
                 width: 100%;
                 vertical-align: top;
             }
             #education_timeline td{
-                border-bottom: 1px solid #444;
+                border-bottom: 1px solid #ccc;
                 padding: 20px;
             }
-            #education_timeline .duration{
-                font-weight: bold;
-            }
             #education_timeline .course{
-                font-weight: bold;
                 font-size: 1.2em;
-                cursor:default;
+                color: orange;
+            }
+            #education_timeline td:has(.course){
+                cursor: pointer;
             }
             #education_timeline .college_mark{
                 height: 0;
@@ -111,59 +128,82 @@
                 height:auto;
                 opacity: 1;
             }
+            #projects>div{
+                border: 1px solid #aaa;
+                padding: 20px;
+                border-radius: 10px;
+            }
             .project_show{
-                display: flex;
-                gap: 30px;
-                margin: 40px 0px;
+                /* display: flex;
+                gap: 30px; */
+                margin: 10px 0px 5px;
+                overflow: hidden;
+            }
+            #projects .project_title{
+                font-weight: bold;
+                color: #444;
+                font-size: 1.5em;
+                margin-top: 10px;
             }
             .project_show .image_video{
-                flex: 1;
+                /* flex: 1; */
+                float: left;
+                width: 50%;
+                margin: 0 20px 20px 0;
+                box-shadow: 1px 1px 5px #999;
+            }
+            .project_show .image_video::after{
+                content:"";
+                display: table;
+                clear: both;
             }
             .project_show .project_detail{
-                flex: 1;
-                color: #bbb;
+                /* flex: 1; */
+                color: #555;
             }
             .project_show .project_detail a{
-                color: tomato;
+                color: orange;
                 text-decoration: none;
-                font-weight: bold;
+                /* font-weight: bold; */
             }
             .project_show img{
                 width: 100%;
             }
-            .project_show .project_title{
-                font-weight: bold;
-                color: white;
-                font-size: 1.5em;
-            }
             .project_show .project_description{
                 font-style: italic;
+            }
+            #contact{
+                background-color: #444;
+                color: #ccc;
             }
             #contact .title{
                 font-weight: bold;
                 font-size: 1.1em;
             }
-            #contact div{
+            #contact > div{
                 margin-bottom: 15px;
             }
-            #contact .contact_link span{
-                font-weight: bold;
+            #contact h2{
+                font-size: 1.8em;
             }
-            #contact .contact_link a{
+            #contact #contact_links{
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+            }
+            #contact #contact_links div div{
+                margin-bottom: 10px;
+            }
+            #contact #contact_links div a{
                 text-decoration: none;
-                color: tomato;
+                color: orange;
             }
-            section h2{
-                font-size: 2em;
-                margin: 0.5em 0em;
-                line-height: 1em;
-                text-align: center;
-                font-style:italic;
-            }
+            
             @media screen and (max-width:900px){
                 #intro{
                     flex-direction: column;
                     text-align: center;
+                    gap:10px;
                 }
                 #name_intro{
                     font-size: 2.7em;
@@ -172,6 +212,7 @@
                     margin-top: 2em;
                 }
             }
+            /* @media screen and (max-width:) */
             @media screen and (max-width:620px) {
                 #name_intro{
                     font-size: 2.3em;
@@ -186,6 +227,21 @@
                 #skills ul li img{
                     width:2.8em;
                     height: 3em;
+                }
+                .project_show .image_video{
+                    width: 100%;
+                    margin: 0 0 20px 0;
+                }
+                #education_timeline td{
+                    padding: 20px 5px;
+                }
+                #education_timeline .college_mark{
+                    height:auto;
+                    opacity: 1;
+                }
+                #contact #contact_links{
+                    flex-direction: column;
+                    gap: 0px;
                 }
             }
             @media screen and (max-width:490px) {
@@ -208,6 +264,7 @@
                     width:2.4em;
                     height: 2.6em;
                 }
+                
             }
             @media screen and (max-width:400px){
                 #name_intro{
@@ -226,18 +283,21 @@
         </style>
     </head>
     <body>
-        <section id="intro">
-            <div>
-                <div id="name_intro">
-                    Hi, I'm <br>
-                    <span id="name">Sriram Selvamani</span>
+        <div>
+            <section id="intro">
+                <div>
+                    <div id="name_intro">
+                        Hi, I'm <br>
+                        <span id="name">Sriram Selvamani</span>
+                    </div>
+                    <div id="headline">
+                        Full Stack Developer | Software Developer
+                    </div>
                 </div>
-                <div id="headline">
-                    Full Stack Developer | Software Developer
-                </div>
-            </div>
-            <img src="./assets/images/sriram_s_profile.jpg" id="profile_img" alt="My Profile Picture" width="230px">
-        </section>
+                <img src="./assets/images/sriram_s_profile.jpg" id="profile_img" alt="My Profile Picture" width="230px">
+            </section>
+            <div id="circle"></div>
+        </div>
         <section id="skills">
             <h2>My Skills</h2>
             <div>
@@ -246,18 +306,22 @@
                     <li><img src="/assets/images/python-logo.png" alt="python-logo">Python</li>
                     <li><img src="/assets/images/django-logo.png" alt="django-logo">Django Framework</li>
                     <li><img src="/assets/images/django_rest-logo2.png" alt="django_rest-logo" style="width:120px">Django REST Framework</li>
+                    <li><img src="/assets/images/postman_api-logo.png" alt="postman_api-logo">Postman API</li>
                     <li><img src="/assets/images/mysql-logo.png" alt="mysql-logo">MySQL</li>
                     <li><img src="/assets/images/html-logo.png" alt="html-logo">HTML</li>
                     <li><img src="/assets/images/css-logo.png" alt="css-logo">CSS</li>
                     <li><img src="/assets/images/javascript-logo.png" alt="javascript-logo">JavaScript</li>
                     <li><img src="/assets/images/git-logo.png" alt="git-logo">Git</li>
                     <li><img src="/assets/images/github-logo.png" alt="github-logo">GitHub</li>
+                    <li><img src="/assets/images/terminal-logo.png" alt="terminal-logo">Basic Linux Commands</li>
                 </ul>
             </div>
             <div>
                 <h3>Soft Skills</h3>
                 <ul>
                     <li>Self Learning</li>
+                    <li>Problem Solving</li>
+                    <li>Logical Thinking</li>
                 </ul>
             </div>
         </section>
@@ -265,17 +329,17 @@
             <h2>Education</h2>
             <table id="education_timeline">
                 <tr>
-                    <td class="duration">2022 - 2024</td>
+                    <td class="duration">Sept 2022 - Aug 2024</td>
                     <td>
                         <span class="course">Master of Computer Applications (MCA)</span><br>
                         <div class="college_mark">
                             <span><em>A.V.C. College of Engineering, Mannampandal</em></span><br>
-                            <span>Mark Percentage: <span>75%</span></span>
+                            <span>Mark Percentage: <span>80%</span></span>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="duration">2019 - 2022</td>
+                    <td class="duration">June 2019 - July 2022</td>
                     <td>
                         <span class="course">Bachelor of Computer Applications (BCA)</span><br>
                         <div class="college_mark">
@@ -288,20 +352,22 @@
         </section>
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project_show">
-                <div class="image_video">
-                    <img src="assets/images/project1_homepage.PNG" alt="project1_homepage" >
-                </div>
-                <div class="project_detail">
-                    <span class="project_title">Web-Based Hardware Shop Management System</span><br>
-                    <p class="project_description">
-                        It is my PG project. It is a web-based inventory and point-of-sale system with sales reporting 
-                        features, designed for hardware shops but adaptable for any store, allowing users to manage products, 
-                        variants, suppliers, customers, and transactions, while providing monthly profit, product-based, 
-                        and customer-based reports.
-                    </p>
-                    <span style="font-weight: bold;">Used Skills: </span><span>Django framework, MySQL, HTML, CSS, JavaScript</span>
-                    <p>See GitHub Source: <a href="https://github.com/sriram-s17/mca-project">sriram-s17/mca-project</a></p>
+            <div>
+                <h3 class="project_title">Web-Based Hardware Shop Management System</h3>
+                <div class="project_show">
+                    <div class="image_video">
+                        <img src="assets/images/project1_homepage.PNG" alt="project1_homepage" >
+                    </div>
+                    <div class="project_detail">
+                        <p class="project_description">
+                            It is my PG project. It is a web-based inventory and point-of-sale system with sales reporting
+                            features, designed for hardware shops but adaptable for any store, allowing users to manage products,
+                            variants, suppliers, customers, and transactions, while providing monthly profit, product-based,
+                            and customer-based reports.
+                        </p>
+                        <span style="font-weight: bold;">Used Skills: </span><span>Django framework, MySQL, HTML, CSS, JavaScript</span>
+                        <p>See GitHub Source: <a href="https://github.com/sriram-s17/mca-project">sriram-s17/mca-project</a></p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -315,23 +381,29 @@
                 <span class="title">Current Address</span>
                 <address>Vijinapura, Bengaluru, Karnataka, 560016.</address>
             </div>
-            <div>
-                <span class="contact_link"><span><i class="fa-solid fa-phone"></i> Phone No: </span> <a href="tel:+919943686989">(+91) 9943686989</a></span>
-            </div>
-            <div>
-                <span class="contact_link"><span><i class="fa-solid fa-envelope"></i> Email ID: </span><a href="mailto:sriramselvamani01@gmail.com">sriramselvamani01@gmail.com</a></span>
-            </div>
-            <div>
-                <span class="social_link contact_link"><span><i class="fa-brands fa-linkedin"></i> LinkedIn: </span><a href="https://www.linkedin.com/in/sriram-selvamani/">sriram-selvamani</a></span>
-            </div>
-            <div>
-                <span class="social_link contact_link"><span><i class="fa-brands fa-github"></i> GitHub: </span><a href="https://github.com/sriram-s17">sriram-s17</a></span>
+            <div id="contact_links">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-phone"></i> Phone: <a href="tel:+919943686989">(+91) 9943686989</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-envelope"></i> Email: <a href="mailto:sriramselvamani01@gmail.com">sriramselvamani01@gmail.com</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/sriram-selvamani/">sriram-selvamani</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-github"></i> <a href="https://github.com/sriram-s17">sriram-s17</a>
+                    </div>
+                </div>
             </div>
         </section>
         <script>
             courses = document.querySelectorAll('.course')
             courses.forEach(course => {
-                course.addEventListener('click', ()=>{
+                course.parentNode.addEventListener('click', ()=>{
                     course.parentNode.querySelector('.college_mark').classList.toggle('show')
                 })
             });
