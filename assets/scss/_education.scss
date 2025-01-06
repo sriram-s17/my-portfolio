@@ -1,0 +1,32 @@
+@use "colors";
+#education{
+    // .education-item{
+    //     border-left: 2px solid orange;
+    //     padding-left: 10px;
+    //     position: relative;
+    //     &::before{
+    //         content:" \02EF";
+    //         display: inline-flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         position: absolute;
+    //         z-index: 2;
+    //         transform: translate(-50%, 0%);
+    //         left: -10px;
+    //         width: 20px;
+    //         height: 20px;
+    //         background-color: orange;
+    //         border-radius: 50%;
+    //     }
+    // }
+    color: colors.$textColor2;
+    background-color: white;
+    .education-item{
+        background-image: linear-gradient(to right, #fff, #eee);
+        padding: 20px 30px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 10px 10px 20px skyblue;
+        margin-bottom: 30px;
+    }
+}

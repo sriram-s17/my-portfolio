@@ -1,0 +1,13 @@
+@use "sizes";
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+section h2{
+    font-size: sizes.$headingSize2;
+    margin-bottom: 1.2em;
+    text-align: center;
+    font-variant: small-caps;
+    font-style:italic;
+}

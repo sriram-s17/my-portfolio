@@ -1,0 +1,41 @@
+@use "sizes";
+#projects{
+    & > div{
+        max-width: 1000px;
+        margin:auto;
+        margin-bottom: 30px;
+        border: 1px solid #aaa;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 50px orange;
+        background-image: linear-gradient(to bottom right, #e9e9e9, #fff);
+        h3{
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        a{
+            color: orange;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .project_show{
+            &::after{
+                content:"";
+                display: table;
+                clear: both;
+            }
+            .image_video{
+                float: left;
+                width: 50%;
+                margin: 0 20px 20px 0;
+                box-shadow: 1px 1px 5px #999;
+            }
+            video{
+                width:100%;
+            }
+            .project_description{
+                font-style: italic;
+            }
+        }
+    }
+}

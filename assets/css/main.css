@@ -1,0 +1,173 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+section h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1.2em;
+  text-align: center;
+  font-variant: small-caps;
+  font-style: italic;
+}
+
+#intro {
+  -webkit-clip-path: circle(150% at 50% -75%);
+          clip-path: circle(150% at 50% -75%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 3em 0em 25%;
+  font-weight: bold;
+  background-color: orange;
+  z-index: 2;
+}
+#intro #name_intro {
+  font-size: 3em;
+}
+#intro #name {
+  display: inline-block;
+  /* another design css */
+  color: white;
+  /* color:tomato;                */
+  font-size: 1.5em;
+  margin: 0.2em 0 0.6em;
+  line-height: 0.8em;
+}
+#intro #headline {
+  font-size: 1.5em;
+  /* color:rgb(100, 100, 100); */
+  /* another design css */
+  color: rgb(50, 50, 50);
+}
+#intro #profile_img {
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px;
+}
+
+#skills h3 {
+  font-size: 1.2em;
+  color: orangered;
+}
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0px;
+}
+#skills ul li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  word-break: break-all;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 1.5px solid #aaa;
+  box-shadow: 2px 1px 1px;
+}
+#skills ul li img {
+  width: 3em;
+  height: 3.2em;
+}
+
+#education {
+  color: #333;
+  background-color: white;
+}
+#education .education-item {
+  background-image: linear-gradient(to right, #fff, #eee);
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 10px 10px 20px skyblue;
+  margin-bottom: 30px;
+}
+
+#projects > div {
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 30px;
+  border: 1px solid #aaa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 50px orange;
+  background-image: linear-gradient(to bottom right, #e9e9e9, #fff);
+}
+#projects > div h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+#projects > div a {
+  color: orange;
+  text-decoration: none;
+  font-weight: 500;
+}
+#projects > div .project_show::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#projects > div .project_show .image_video {
+  float: left;
+  width: 50%;
+  margin: 0 20px 20px 0;
+  box-shadow: 1px 1px 5px #999;
+}
+#projects > div .project_show video {
+  width: 100%;
+}
+#projects > div .project_show .project_description {
+  font-style: italic;
+}
+
+footer {
+  padding: 30px;
+  background-image: linear-gradient(to bottom right, #000, #333);
+  color: #bbb;
+}
+footer h2 {
+  font-size: 2.3rem;
+  color: #ddd;
+}
+footer > div {
+  margin-bottom: 30px;
+}
+footer > div h3 {
+  margin: 10px 0px;
+}
+footer #contact-links div {
+  margin-bottom: 15px;
+}
+footer #contact-links div a {
+  text-decoration: none;
+  color: #bbb;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  transform-origin: 0%;
+  overflow: hidden;
+}
+footer #contact-links div a i {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+footer #contact-links div a:hover {
+  transform: scale(1.05);
+}
+footer #social-links {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+}
+footer #social-links a i {
+  font-size: 1.3rem !important;
+}
+footer #social-links a:hover {
+  transform: scale(1.2) !important;
+}/*# sourceMappingURL=main.css.map */
