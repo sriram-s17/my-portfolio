@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    padding: 3em 0em 25%;
+    padding: 3em 0em 3em;
     font-weight: bold;
     background-color: orange;
     z-index: 2;
@@ -21,10 +21,17 @@
         line-height: 0.8em;
     }
     #headline{
-        font-size: 1.5em;
-        /* color:rgb(100, 100, 100); */
-        /* another design css */
-        color:rgb(50, 50, 50);
+        a{
+            display: inline-block;
+            padding: 15px 20px;
+            color: orange;
+            background-image: linear-gradient(to bottom, white, #efefef);
+            border-radius: 30px;
+            text-decoration: none;
+            &:hover{
+                box-shadow: 0px 0px 10px white;
+            }
+        }
     }
     #profile_img{
         border-radius: 50%;
