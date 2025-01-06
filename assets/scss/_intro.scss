@@ -1,10 +1,10 @@
 #intro{
-    clip-path: circle(150% at 50% -75%);
+    // clip-path: circle(200% at 50% -340%);
     display:flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
-    padding: 3em 0em 3em;
+    padding: 3em 0em 5em;
     font-weight: bold;
     background-color: orange;
     z-index: 2;
@@ -36,5 +36,10 @@
     #profile_img{
         border-radius: 50%;
         box-shadow: 2px 2px 10px;
+    }
+    @media screen and (max-width:900px){
+        flex-direction: column;
+        text-align: center;
+        gap:10px;
     }
 }

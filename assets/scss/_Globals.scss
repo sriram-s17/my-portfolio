@@ -4,10 +4,16 @@ body{
     margin: 0;
     background-color: #f9f9f9;
 }
-section h2{
-    font-size: sizes.$headingSize2;
-    margin-bottom: 1.2em;
-    text-align: center;
-    font-variant: small-caps;
-    font-style:italic;
+section{
+    &:not(:first-child){
+        max-width: 1000px;
+        margin:auto;
+    }
+    h2{
+        font-size: sizes.$headingSize2;
+        margin-bottom: 1.2em;
+        text-align: center;
+        font-variant: small-caps;
+        font-style:italic;
+    }
 }

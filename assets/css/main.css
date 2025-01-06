@@ -4,6 +4,10 @@ body {
   background-color: #f9f9f9;
 }
 
+section:not(:first-child) {
+  max-width: 1000px;
+  margin: auto;
+}
 section h2 {
   font-size: 2.6rem;
   margin-bottom: 1.2em;
@@ -13,13 +17,11 @@ section h2 {
 }
 
 #intro {
-  -webkit-clip-path: circle(150% at 50% -75%);
-          clip-path: circle(150% at 50% -75%);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
-  padding: 3em 0em 3em;
+  padding: 3em 0em 5em;
   font-weight: bold;
   background-color: orange;
   z-index: 2;
@@ -50,6 +52,13 @@ section h2 {
 #intro #profile_img {
   border-radius: 50%;
   box-shadow: 2px 2px 10px;
+}
+@media screen and (max-width: 900px) {
+  #intro {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
 }
 
 #skills h3 {
