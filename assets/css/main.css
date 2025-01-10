@@ -9,11 +9,10 @@ section {
 }
 section:not(:first-child) {
   max-width: 1000px;
-  margin: auto;
 }
 section h2 {
   font-size: 1.8rem;
-  margin-bottom: 1.2em;
+  margin: 0.5em 0 1.2em;
   text-align: center;
   font-style: italic;
   font-weight: 500;
@@ -92,7 +91,8 @@ section h2 {
 #skills ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-evenly;
+  gap: 10px;
   padding: 0px;
 }
 #skills ul li {
@@ -104,7 +104,7 @@ section h2 {
   background-color: white;
   color: black;
   word-break: break-all;
-  padding: 10px 22px;
+  padding: 12px 20px;
   border-radius: 25px;
   font-weight: bold;
   border: 1.5px solid #aaa;
@@ -113,6 +113,11 @@ section h2 {
 #skills ul li img {
   width: 3em;
   height: 3.2em;
+}
+@media only screen and (min-width: 480px) {
+  #skills ul {
+    gap: 20px;
+  }
 }
 
 #education {
@@ -126,6 +131,20 @@ section h2 {
   border: 1px solid #ccc;
   box-shadow: 10px 10px 20px skyblue;
   margin-bottom: 30px;
+}
+#education .education-item h3 {
+  margin: 10px 0;
+}
+#education .education-item p {
+  margin: 5px 0;
+}
+#education .education-item ul {
+  margin: 10px 0;
+}
+#education .education-item .duration {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.9em;
 }
 
 #projects > div {
@@ -153,10 +172,19 @@ section h2 {
   clear: both;
 }
 #projects > div .project_show .image_video {
-  float: left;
-  width: 50%;
   margin: 0 20px 20px 0;
   box-shadow: 1px 1px 5px #999;
+}
+@media only screen and (min-width: 768px) {
+  #projects > div .project_show .image_video {
+    float: left;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #projects > div .project_show .image_video {
+    width: 50%;
+  }
 }
 #projects > div .project_show video {
   width: 100%;
@@ -195,8 +223,10 @@ footer #contact-links div a i {
   margin-right: 10px;
   font-size: 1rem;
 }
-footer #contact-links div a:hover {
-  transform: scale(1.05);
+@media (hover: hover) {
+  footer #contact-links div a:hover {
+    transform: scale(1.05);
+  }
 }
 footer #social-links {
   margin-top: 30px;
@@ -206,6 +236,8 @@ footer #social-links {
 footer #social-links a i {
   font-size: 1.3rem !important;
 }
-footer #social-links a:hover {
-  transform: scale(1.2) !important;
+@media (hover: hover) {
+  footer #social-links a:hover {
+    transform: scale(1.2) !important;
+  }
 }/*# sourceMappingURL=main.css.map */

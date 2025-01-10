@@ -28,5 +28,19 @@
         border: 1px solid #ccc;
         box-shadow: 10px 10px 20px skyblue;
         margin-bottom: 30px;
+        h3{
+            margin: 10px 0; 
+        }
+        p{
+            margin: 5px 0;
+        }
+        ul{
+            margin: 10px 0;
+        }
+        .duration{
+            font-style: italic;
+            font-weight: 300;
+            font-size: 0.9em;
+        }
     }
 }

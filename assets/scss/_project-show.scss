@@ -1,4 +1,5 @@
 @use "sizes";
+@use "mixins" as mix;
 #projects{
     & > div{
         max-width: 1000px;
@@ -25,10 +26,15 @@
                 clear: both;
             }
             .image_video{
-                float: left;
-                width: 50%;
                 margin: 0 20px 20px 0;
                 box-shadow: 1px 1px 5px #999;
+                @include mix.tablet{
+                    float: left;
+                    width: 50%;
+                }
+                @include mix.desktop{
+                    width:50%;
+                }
             }
             video{
                 width:100%;

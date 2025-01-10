@@ -9,11 +9,11 @@ section{
     padding: 2em 1em;
     &:not(:first-child){
         max-width: 1000px;
-        margin:auto;
+        // margin: 100px auto;
     }
     h2{
         font-size: 1.8rem;
-        margin-bottom: 1.2em;
+        margin: 0.5em 0 1.2em;
         text-align: center;
         // text-transform: uppercase;
         font-style:italic;

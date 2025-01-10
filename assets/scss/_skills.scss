@@ -1,3 +1,4 @@
+@use "mixins" as mix;
 #skills
 {
     h3{
@@ -8,7 +9,8 @@
     ul{
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        justify-content: space-evenly;
+        gap: 10px;
         padding:0px;
         li{
             list-style-type: none;
@@ -19,7 +21,7 @@
             background-color: white;
             color: black;
             word-break: break-all;
-            padding: 10px 22px;
+            padding: 12px 20px;
             border-radius: 25px;
             font-weight: bold;
             border:1.5px solid #aaa;
@@ -28,6 +30,9 @@
             width:3em;
             height: 3.2em;
             }
+        }
+        @include mix.small-tablet{
+            gap: 20px;
         }
     }
 }

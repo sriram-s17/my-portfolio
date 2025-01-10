@@ -115,7 +115,7 @@
                     <li><img src="/assets/images/postman_api-logo.png" alt="postman_api-logo">Postman API</li>
                     <li><img src="/assets/images/git-logo.png" alt="git-logo">Git</li>
                     <li><img src="/assets/images/github-logo.png" alt="github-logo">GitHub</li>
-                    <li><img src="/assets/images/terminal-logo.png" alt="terminal-logo">Basic Linux Commands</li>
+                    <li style="flex-direction: row;gap:10px; width:140px;"><img src="/assets/images/terminal-logo.png" alt="terminal-logo">Basic Linux Commands</li>
                 </ul>
             </div>
             <!-- <div>
@@ -142,7 +142,7 @@
                 <p class="college">A.V.C. College (Autonomous)</p>
                 <p class="duration">Jun 2019 –  Jul 2022</p>
                 <ul class="achievements">
-                    <li>Overall first prize department competitions</li>
+                    <li>Overall First prize in Department Competitions</li>
                     <li>CGPA: 7.09</li>
                 </ul>
             </div>
@@ -209,12 +209,19 @@
             </div>
         </footer>
         <script>
-            courses = document.querySelectorAll('.course');
-            courses.forEach(course => {
-                course.parentNode.addEventListener('click', ()=>{
-                    course.parentNode.querySelector('.college_mark').classList.toggle('show')
-                })
-            });
+            // const sections = document.querySelectorAll("section");
+            // sections.forEach((section)=>{
+            //     section.children.forEach((section_child)=>{
+            //         style.transform = "0.5s ease";
+            //     })
+            //     document.addEventListener("scroll", scroll_up_section(section))
+            // })
+            // function scroll_up_section(section){
+            //     screenHeight = window.innerHeight;
+            //     if (section.offsetHeight < screenHeight){
+            //         section.style.marginTop = "0px";
+            //     }
+            // }
         </script>
     </body>
 </html>

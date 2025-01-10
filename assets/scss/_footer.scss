@@ -27,8 +27,10 @@ footer{
                     margin-right: 10px;
                     font-size:1rem;
                 }
-                &:hover{
-                    transform: scale(1.05);
+                @media (hover: hover){
+                    &:hover{
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
@@ -41,8 +43,11 @@ footer{
             i{
                 font-size: 1.3rem !important;
             }
-            &:hover{
-                transform: scale(1.2) !important;
+            @media (hover: hover){
+                &:hover{
+                    transform: scale(1.2) !important;
+            
+                }
             }
         }
     }
