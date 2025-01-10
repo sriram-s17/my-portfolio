@@ -14,16 +14,11 @@
             }
             
             @media screen and (max-width:900px){
-                #name_intro{
-                    font-size: 2.7em;
-                }
-                #profile_img{
-                    margin-top: 2em;
-                }
+
             }
             /* @media screen and (max-width:) */
             @media screen and (max-width:620px) {
-                #name_intro{
+                #intro-text{
                     font-size: 2.3em;
                 }
                 #skills ul{
@@ -50,17 +45,11 @@
                 }
             }
             @media screen and (max-width:490px) {
-                #name_intro{
+                #intro-text{
                     font-size: 2em;
-                }
-                #name{
-                    font-size: 1.3m;
                 }
                 #headline{
                     font-size: 1.2em;
-                }
-                #profile_img{
-                    width:200px;
                 }
                 #skills ul li{
                     padding: 8px 18px;
@@ -72,36 +61,33 @@
                 
             }
             @media screen and (max-width:400px){
-                #name_intro{
+                #intro-text{
                     font-size: 1.8em;
-                }
-                #name{
-                    font-size: 1.1em;
                 }
                 #headline{
                     font-size: 1.1em;
                 }
-                #profile_img{
-                    width:180px;
-                }
             }
+            
         </style>
     </head>
     <body>
-        <section id="intro">
-            <div>
-                <div id="name_intro">
-                    Hi, I'm <br>
-                    <span id="name">Sriram Selvamani</span>
-                </div>
-                <div id="headline">
-                    <a href="assets/pdfs/Sriram_S_CV.pdf" download>Download My Resume</a>
-                </div>
+        <!-- <header>
+            <i class=""></i>
+            
+            <div id="headline">
+                <a href="assets/pdfs/Sriram_S_CV.pdf" download>Download My Resume</a>
             </div>
-            <img src="./assets/images/sriram_s_profile.jpg" id="profile_img" alt="My Profile Picture" width="230px">
+        </header> -->
+        <section id="intro">
+            <div id="intro-text">
+                Hi, I'm <br>
+                <h1 id="name">Sriram Selvamani</h1>
+            </div>
+            <img src="./assets/images/sriram_s_profile.jpg" id="profile-img" alt="My Profile Picture" width="230px">
         </section>
         <section id="skills">
-            <h2>My Skills</h2>
+            <h2>Skillset</h2>
             <div>
                 <h3>Technical Skills</h3>
                 <ul>
@@ -209,7 +195,7 @@
             </div>
         </footer>
         <script>
-            courses = document.querySelectorAll('.course')
+            courses = document.querySelectorAll('.course');
             courses.forEach(course => {
                 course.parentNode.addEventListener('click', ()=>{
                     course.parentNode.querySelector('.college_mark').classList.toggle('show')
